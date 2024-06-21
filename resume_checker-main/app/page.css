@@ -1,0 +1,35 @@
+*{
+    color: white;
+}
+body{
+    background-color: black;
+}
+.container{
+    background-color:grey ;
+    width: 70%;
+    margin-left:15%;
+    height:600px;
+    padding:10px;
+}
+form{
+    background-color:grey ;
+    width: 80%; 
+}
+button{
+    background-color: blue;
+    padding:10px;
+    width:120px;
+    margin-left:10px;
+}
+#jobdescription{
+    height:100px;
+    width:90%;
+    background-color:rgb(145, 145, 145);
+    border:1px solid white;
+}
+h1{
+    margin-left:35%;
+}
+input{
+    background-color:grey;
+}

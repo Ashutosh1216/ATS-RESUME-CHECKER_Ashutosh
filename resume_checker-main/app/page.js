@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from "react";
+import "./page.css"
 
 const SUMARIZE_URL = "/api";
 
 export default function Home() {
   const [summary, setSummary] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [desc,setDesc]=useState("");
   const [file, setFile] = useState(null);
 
   function sendToAPI(text){
@@ -102,25 +102,10 @@ export default function Home() {
 
   return (
     <>
-    <h1>Resume Checker</h1>
+    <div className="container">
+    <h1>Resume Checker 😎</h1>
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input 
-        type="text"
-        id="name"
-        name="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <br /><br />
-      <label htmlFor="email">Email:</label>
-      <input 
-        type="email"
-        id="email"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <textarea id="jobdescription" placeholder="job description" onChange={(e)=>setDesc(e.target.value)}></textarea>
       <br /><br />
       <label htmlFor="file">Upload Resume:</label>
       <input 
@@ -131,9 +116,13 @@ export default function Home() {
         onChange={onChangeFileInput}
       />
       <br /><br />
-      <button type="submit">Submit</button>
+      <button type="submit">Check Ats</button>
+      <button type="submit">Check Score</button>
+      <button type="submit">How it works</button>
     </form>
+    
     <p>{summary}</p>
+    </div>
   </>
 
   );
